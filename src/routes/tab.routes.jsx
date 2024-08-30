@@ -1,5 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Feather } from "@expo/vector-icons";
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Entypo from '@expo/vector-icons/Entypo';
 
 import Home from "../screens/Home";
 import Movies from "../screens/Movies";
@@ -11,7 +13,7 @@ const TabRoutes = () => {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Home"
+        name="About us"
         component={Home}
         options={{
           tabBarIcon: ({ focused }) => (
@@ -32,8 +34,8 @@ const TabRoutes = () => {
         component={Movies}
         options={{
           tabBarIcon: ({ focused }) => (
-            <Feather
-              name="movie"
+            <FontAwesome
+              name="file-movie-o"
               size={24}
               color={focused ? "#131313" : "#D6D6D6"}
             />
@@ -49,8 +51,8 @@ const TabRoutes = () => {
         component={Hobbies}
         options={{
           tabBarIcon: ({ focused }) => (
-            <Feather
-              name="list"
+            <Entypo
+              name="emoji-happy"
               size={24}
               color={focused ? "#131313" : "#D6D6D6"}
             />
